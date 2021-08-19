@@ -20,7 +20,7 @@ config({
 });
 
 client.on("ready", () => {
-  console.log(`Hi, ${client.user.username} is now online!`);
+  console.log(`Připojeno na ${client.user.username}`);
 
   client.user.setPresence({
     status: "online",
@@ -50,4 +50,4 @@ client.on("message", async message => {
     command.run(client, message, args);
 });
 
-client.login(process.env.TOKEN);
+client.login("TOKEN");
